@@ -18,9 +18,10 @@ const PartOne = () => {
             <h1>How are you feeling today?</h1>
             <div>
                 <input value={feel} onChange={handleChange} className="input" type="number" />
+                <button onClick={() => history.push('/step/two')} className="button">Next</button>
             </div>
         </>
-    )
+    );
 }
 
 
