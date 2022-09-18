@@ -1,3 +1,4 @@
+- [x] display question on page one
 - [ ] CREATE PAGE ONE INPUT FIELD
 - [ ] CREATE PAGE ONE NEXT BUTTON 
 - [ ]

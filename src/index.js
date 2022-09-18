@@ -7,6 +7,17 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
+//function to diplay PartOne
+const feel = (state = '', action) => {
+    if (action.type === 'SET_FEEL') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_ALL')
+    {
+        return '';
+    }
+    return state;
+}
+
 
 const storeInstance = createStore(
     combineReducers(

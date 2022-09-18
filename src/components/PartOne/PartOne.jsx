@@ -15,7 +15,10 @@ const PartOne = () => {
 
     return (
         <>
-            <h3>How are you feeling today?</h3>
+            <h1>How are you feeling today?</h1>
+            <div>
+                <input value={feel} onChange={handleChange} className="input" type="number" />
+            </div>
         </>
     )
 }
