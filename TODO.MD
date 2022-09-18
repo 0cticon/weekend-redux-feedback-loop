@@ -1,9 +1,9 @@
 - [x] display question on page one
-- [ ] CREATE PAGE ONE INPUT FIELD
-- [ ] CREATE PAGE ONE NEXT BUTTON 
-- [ ]
-- [ ]
-- [ ]
+- [x] CREATE PAGE ONE INPUT FIELD
+- [x] CREATE PAGE ONE NEXT BUTTON 
+- [x] create and display page 2 question, input field, next button
+- [x] create and display page 3 question, input field, next button
+- [x] create and display page 4 question, input field, next button
 - [ ]
 - [ ]
 - [ ]

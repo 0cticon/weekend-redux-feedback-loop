@@ -5,7 +5,8 @@ import './App.css';
 import PartOne from '../PartOne/PartOne';
 import PartTwo from '../PartTwo/PartTwo';
 import PartThree from '../PartThree/PartThree';
-// import PartOne from '../PartOne/PartOne.jsx';
+import PartFour from '../PartFour/PartFour';
+
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/"><PartOne /></Route>
         <Route exact path="/step/two"><PartTwo /></Route>
         <Route exact path="/step/three"><PartThree /></Route>
+        <Route exact path="/step/four"><PartFour /></Route>
       </Router>
 
     </div>

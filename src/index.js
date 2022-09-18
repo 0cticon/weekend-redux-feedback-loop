@@ -38,6 +38,16 @@ const support = (state = '', action) => {
     return state;
 }
 
+const comment = (state = '', action) => {
+    if (action.type === 'SET_COMMENT') {
+        return action.payload;
+    } else if (action.type === 'CLEAR_ALL')
+    {
+        return '';
+    }
+    return state;
+}
+
 
 const storeInstance = createStore(
     combineReducers(
@@ -45,6 +55,7 @@ const storeInstance = createStore(
             feel,
             under,
             support,
+            comment,
         }
     )
 )
