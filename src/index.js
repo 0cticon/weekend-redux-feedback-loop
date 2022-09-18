@@ -18,11 +18,22 @@ const feel = (state = '', action) => {
     return state;
 }
 
+const under = (state = '', action) => {
+    if (action.type === 'SET_UNDER') {
+        return action/payload;
+    } else if (action.type === 'CLEAR_ALL')
+    {
+        return '';
+    }
+    return state;
+}
+
 
 const storeInstance = createStore(
     combineReducers(
         {
             feel,
+            under,
         }
     )
 )
