@@ -20,7 +20,17 @@ const feel = (state = '', action) => {
 
 const under = (state = '', action) => {
     if (action.type === 'SET_UNDER') {
-        return action/payload;
+        return action.payload;
+    } else if (action.type === 'CLEAR_ALL')
+    {
+        return '';
+    }
+    return state;
+}
+
+const support = (state = '', action) => {
+    if (action.type === 'SET_SUPPORT') {
+        return action.payload;
     } else if (action.type === 'CLEAR_ALL')
     {
         return '';
@@ -34,6 +44,7 @@ const storeInstance = createStore(
         {
             feel,
             under,
+            support,
         }
     )
 )

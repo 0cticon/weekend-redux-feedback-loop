@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 // Allows us to navigate to another page
 import { useHistory } from 'react-router-dom'; // history import
 
-const PartTwo = () => {
+const PartThree = () => {
     const history = useHistory();
     const type = useSelector(store => store.type);
     const dispatch = useDispatch();
@@ -12,13 +12,13 @@ const PartTwo = () => {
     }
     return (
         <>
-            <h1>How well are you understanding the content?</h1>
+            <h1>How well are you being supported?</h1>
             <div>
                 <input value={type} onChange={handleChange} className="input" type="number" />
-                <button onClick={() => history.push('/step/three')} className="button">Next</button>
+                <button onClick={() => history.push('/step/four')} className="button">Next</button>
             </div>
         </>
     )
 }
 
-export default PartTwo;
+export default PartThree;
