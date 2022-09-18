@@ -4,20 +4,20 @@ import { useHistory } from 'react-router-dom'; // history import
 
 const PartOne = () => {
     const history = useHistory();
-    const feel = useSelector(store => store.name); //getter
+    const feeling = useSelector(store => store.feeling); //getter
     const dispatch = useDispatch();
 
     //dispatch
     const handleChange = (event) => {
         //pass data to reducer
-        dispatch({ type: 'SET_FEEL', payload: event.target.value });
+        dispatch({ type: 'SET_FEELING', payload: event.target.value });
     }
 
     return (
         <>
             <h1>How are you feeling today?</h1>
             <div>
-                <input value={feel} onChange={handleChange} className="input" type="number" />
+                <input value={feeling} onChange={handleChange} className="input" type="number" />
                 <button onClick={() => history.push('/step/two')} className="button">Next</button>
             </div>
         </>

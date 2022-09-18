@@ -6,6 +6,7 @@ import PartOne from '../PartOne/PartOne';
 import PartTwo from '../PartTwo/PartTwo';
 import PartThree from '../PartThree/PartThree';
 import PartFour from '../PartFour/PartFour';
+import Summary from '../SubmitForm/SubmitForm';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/step/two"><PartTwo /></Route>
         <Route exact path="/step/three"><PartThree /></Route>
         <Route exact path="/step/four"><PartFour /></Route>
+        <Route exact path="/step/submit"><Summary /></Route>
       </Router>
 
     </div>

@@ -8,8 +8,8 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 //function to diplay PartOne
-const feel = (state = '', action) => {
-    if (action.type === 'SET_FEEL') {
+const feeling = (state = '', action) => {
+    if (action.type === 'SET_FEELING') {
         return action.payload;
     } else if (action.type === 'CLEAR_ALL')
     {
@@ -18,8 +18,8 @@ const feel = (state = '', action) => {
     return state;
 }
 
-const under = (state = '', action) => {
-    if (action.type === 'SET_UNDER') {
+const understanding = (state = '', action) => {
+    if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
     } else if (action.type === 'CLEAR_ALL')
     {
@@ -38,8 +38,8 @@ const support = (state = '', action) => {
     return state;
 }
 
-const comment = (state = '', action) => {
-    if (action.type === 'SET_COMMENT') {
+const comments = (state = '', action) => {
+    if (action.type === 'SET_COMMENTS') {
         return action.payload;
     } else if (action.type === 'CLEAR_ALL')
     {
@@ -52,13 +52,14 @@ const comment = (state = '', action) => {
 const storeInstance = createStore(
     combineReducers(
         {
-            feel,
-            under,
+            feeling,
+            understanding,
             support,
-            comment,
+            comments,
         }
-    )
-)
+    ),
+    applyMiddleware(logger)
+);
 
 ReactDOM.render(
     <Provider store={storeInstance}>
