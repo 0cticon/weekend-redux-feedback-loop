@@ -17,7 +17,7 @@ const feeling = (state = '', action) => {
     }
     return state;
 }
-
+//function to display PartTwo
 const understanding = (state = '', action) => {
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
@@ -27,7 +27,7 @@ const understanding = (state = '', action) => {
     }
     return state;
 }
-
+//function to display PartThree
 const support = (state = '', action) => {
     if (action.type === 'SET_SUPPORT') {
         return action.payload;
@@ -37,7 +37,7 @@ const support = (state = '', action) => {
     }
     return state;
 }
-
+//function to display PartFour
 const comments = (state = '', action) => {
     if (action.type === 'SET_COMMENTS') {
         return action.payload;

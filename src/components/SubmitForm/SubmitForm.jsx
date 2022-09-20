@@ -13,16 +13,18 @@ const Submit = () => {
 
     //axios POST to pass input data to server
     const handleSubmit = () => {
+
         axios({
             method: 'POST',
-            url: '/',
+            url: '/feedback',
             data: {
                 feeling: feeling,
-                under: understanding,
+                understanding: understanding,
                 support: support,
                 comments: comments,
             }
         }).then((response) => {
+            console.log(response);
             dispatch({ type: 'CLEAR_ALL' });
             history.push('/');
         }).catch((error) => {
@@ -41,9 +43,10 @@ const Submit = () => {
                 }}>
                     <div>Feeling: {feeling}</div>
                     <div>Understanding: {understanding}</div>
-                    <div>Support Level {support}</div>
-                    <div>Added Comment {comments}</div>
+                    <div>Support Level: {support}</div>
+                    <div>Added Comment: {comments}</div>
                 </div>
+                <button onClick={handleSubmit} className="button">Submit</button>
             </div>
         </>
     )
